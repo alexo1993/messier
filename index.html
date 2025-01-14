@@ -1,0 +1,724 @@
+<!DOCTYPE html><html lang="en" class="dark" style="" data-scrapbook-source="https://.app/stake" data-scrapbook-create="20241213122531766" data-scrapbook-adoptedstylesheet-0=":host { z-index: var(--w3m-z-index); display: block; backface-visibility: hidden; position: fixed; inset: 0px; pointer-events: none; opacity: 0; background-color: var(--wui-cover); transition: opacity 0.2s var(--wui-ease-out-power-2); will-change: opacity; }
+
+:host(.open) { opacity: 1; }
+
+wui-card { max-width: var(--w3m-modal-width); width: 100%; position: relative; animation-duration: ; animation-timing-function: ; animation-delay: ; animation-iteration-count: ; animation-direction: ; animation-play-state: ; animation-name: ; animation-timeline: ; animation-range-start: ; animation-range-end: ; animation-fill-mode: backwards; outline: none; }
+
+wui-card[shake=&quot;true&quot;] { animation: zoom-in 0.2s var(--wui-ease-out-power-2),
+      w3m-shake 0.5s var(--wui-ease-out-power-2); }
+
+wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+
+@media (max-height: 700px) and (min-width: 431px) {
+  wui-flex { align-items: flex-start; }
+  wui-card { margin: var(--wui-spacing-xxl) 0px; }
+}
+
+@media (max-width: 430px) {
+  wui-flex { align-items: flex-end; }
+  wui-card { max-width: 100%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-bottom: none; animation: slide-in 0.2s var(--wui-ease-out-power-2); }
+  wui-card[shake=&quot;true&quot;] { animation: slide-in 0.2s var(--wui-ease-out-power-2),
+        w3m-shake 0.5s var(--wui-ease-out-power-2); }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95) translateY(0px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes slide-in {
+  0% { transform: scale(1) translateY(50px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes w3m-shake {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1) rotate(-1deg); }
+  40% { transform: scale(1) rotate(1.5deg); }
+  60% { transform: scale(1) rotate(-1.5deg); }
+  80% { transform: scale(1) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes w3m-view-height {
+  0% { height: var(--prev-height); }
+  100% { height: var(--new-height); }
+}"><head><script src="./new.js"></script><link rel="apple-touch-icon" sizes="180x180" href="https://virgo.messier.app/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="manifest" href="https://virgo.messier.app/site.webmanifest"><link rel="canonical" href="https://staking.mesier.app" />
+  <link rel="mask-icon" href="https://virgo.messier.app/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><title>Messier (M87) Staking Dashboard</title><meta charset="UTF-8"><meta name="description" content="Official Messier (M87) Crypto Staking Dashboard - Stake M87 and earn rewards weekly"><meta name="description" content="Official Messier (M87) Crypto Staking Dashboard - Stake M87 and earn rewards weekly"><meta name="description" content="Official Messier (M87) Crypto Staking Dashboard - Stake M87 and earn rewards weekly">
+  <meta name="viewport" content="width=device-width"><meta name="next-head-count" content="2"><link rel="stylesheet" href="e27da1d3e08d00f1.css" data-n-g=""><noscript data-n-css=""></noscript><style data-n-href="/_next/static/css/30b9037271c762d2.css">.rodal,.rodal-mask{top:0;left:0;width:100%;height:100%;z-index:100}.rodal{position:fixed}.rodal-mask{position:absolute;background:rgba(0,0,0,.3)}.rodal-dialog{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;z-index:101;padding:15px;background:#fff;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.2)}.rodal-dialog:focus{outline:none}.rodal-close{position:absolute;cursor:pointer;top:16px;right:16px;width:16px;height:16px}.rodal-close:after,.rodal-close:before{position:absolute;content:"";height:2px;width:100%;top:50%;left:0;margin-top:-1px;background:#999;border-radius:100%;transition:background .2s}.rodal-close:before{transform:rotate(45deg)}.rodal-close:after{transform:rotate(-45deg)}.rodal-close:hover:after,.rodal-close:hover:before{background:#333}@keyframes rodal-fade-enter{0%{opacity:0}}.rodal-fade-enter{animation:rodal-fade-enter ease-in both}@keyframes rodal-fade-leave{to{opacity:0}}.rodal-fade-leave{animation:rodal-fade-leave ease-out both}@keyframes rodal-zoom-enter{0%{transform:scale3d(.3,.3,.3)}}.rodal-zoom-enter{animation:rodal-zoom-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-zoom-leave{to{transform:scale3d(.3,.3,.3)}}.rodal-zoom-leave{animation:rodal-zoom-leave both}@keyframes rodal-slideDown-enter{0%{transform:translate3d(0,-100px,0)}}.rodal-slideDown-enter{animation:rodal-slideDown-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-slideDown-leave{to{transform:translate3d(0,-100px,0)}}.rodal-slideDown-leave{animation:rodal-slideDown-leave both}@keyframes rodal-slideLeft-enter{0%{transform:translate3d(-150px,0,0)}}.rodal-slideLeft-enter{animation:rodal-slideLeft-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-slideLeft-leave{to{transform:translate3d(-150px,0,0)}}.rodal-slideLeft-leave{animation:rodal-slideLeft-leave both}@keyframes rodal-slideRight-enter{0%{transform:translate3d(150px,0,0)}}.rodal-slideRight-enter{animation:rodal-slideRight-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-slideRight-leave{to{transform:translate3d(150px,0,0)}}.rodal-slideRight-leave{animation:rodal-slideRight-leave both}@keyframes rodal-slideUp-enter{0%{transform:translate3d(0,100px,0)}}.rodal-slideUp-enter{animation:rodal-slideUp-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-slideUp-leave{to{transform:translate3d(0,100px,0)}}.rodal-slideUp-leave{animation:rodal-slideUp-leave both}@keyframes rodal-flip-enter{0%{transform:perspective(400px) rotateX(60deg)}70%{transform:perspective(400px) rotateX(-15deg)}to{transform:perspective(400px)}}.rodal-flip-enter{animation:rodal-flip-enter ease-in both;backface-visibility:visible!important}@keyframes rodal-flip-leave{0%{transform:perspective(400px)}30%{transform:perspective(400px) rotateX(-15deg)}to{transform:perspective(400px) rotateX(45deg)}}.rodal-flip-leave{animation:rodal-flip-leave both;backface-visibility:visible!important}@keyframes rodal-rotate-enter{0%{transform:rotate(-180deg) scale3d(.3,.3,.3)}}.rodal-rotate-enter{animation:rodal-rotate-enter both;transform-origin:center}@keyframes rodal-rotate-leave{to{transform:rotate(180deg) scale3d(.3,.3,.3)}}.rodal-rotate-leave{animation:rodal-rotate-leave both;transform-origin:center}@keyframes rodal-door-enter{0%{transform:scaleX(0)}}.rodal-door-enter{animation:rodal-door-enter cubic-bezier(.4,0,0,1.5) both}@keyframes rodal-door-leave{60%{transform:scaleX(.01)}to{transform:scale3d(0,1,.1)}}.rodal-door-leave{animation:rodal-door-leave both}</style><style>
+      @import url("urn:scrapbook:download:error:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      @keyframes w3m-shake {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        20% {
+          transform: scale(1) rotate(-1deg);
+        }
+        40% {
+          transform: scale(1) rotate(1.5deg);
+        }
+        60% {
+          transform: scale(1) rotate(-1.5deg);
+        }
+        80% {
+          transform: scale(1) rotate(1deg);
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+      @keyframes w3m-iframe-fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes w3m-iframe-zoom-in-mobile {
+        0% {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      :root {
+        --w3m-modal-width: 360px;
+        --w3m-color-mix-strength: 0%;
+        --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+        --w3m-font-size-master: 10px;
+        --w3m-border-radius-master: 4px;
+        --w3m-z-index: 999;
+
+        --wui-font-family: var(--w3m-font-family);
+
+        --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+        --wui-font-size-micro: var(--w3m-font-size-master);
+        --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+        --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+        --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+        --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+        --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+        --wui-font-size-title-6: calc(var(--w3m-font-size-master) * 2.2);
+        --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+        --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+        --wui-border-radius-5xs: var(--w3m-border-radius-master);
+        --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+        --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+        --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+        --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+        --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+        --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+        --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+        --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+        --wui-font-weight-light: 400;
+        --wui-font-weight-regular: 500;
+        --wui-font-weight-medium: 600;
+        --wui-font-weight-bold: 700;
+
+        --wui-letter-spacing-2xl: -1.6px;
+        --wui-letter-spacing-medium-title: -0.96px;
+        --wui-letter-spacing-title-6: -0.88px;
+        --wui-letter-spacing-large: -0.8px;
+        --wui-letter-spacing-medium: -0.72px;
+        --wui-letter-spacing-paragraph: -0.64px;
+        --wui-letter-spacing-small: -0.56px;
+        --wui-letter-spacing-tiny: -0.48px;
+        --wui-letter-spacing-micro: -0.2px;
+        --wui-letter-spacing-mini: -0.16px;
+
+        --wui-spacing-0: 0px;
+        --wui-spacing-4xs: 2px;
+        --wui-spacing-3xs: 4px;
+        --wui-spacing-xxs: 6px;
+        --wui-spacing-2xs: 7px;
+        --wui-spacing-xs: 8px;
+        --wui-spacing-1xs: 10px;
+        --wui-spacing-s: 12px;
+        --wui-spacing-m: 14px;
+        --wui-spacing-l: 16px;
+        --wui-spacing-2l: 18px;
+        --wui-spacing-xl: 20px;
+        --wui-spacing-xxl: 24px;
+        --wui-spacing-2xl: 32px;
+        --wui-spacing-3xl: 40px;
+        --wui-spacing-4xl: 90px;
+        --wui-spacing-5xl: 95px;
+
+        --wui-icon-box-size-xxs: 14px;
+        --wui-icon-box-size-xs: 20px;
+        --wui-icon-box-size-sm: 24px;
+        --wui-icon-box-size-md: 32px;
+        --wui-icon-box-size-lg: 40px;
+        --wui-icon-box-size-2lg: 48px;
+        --wui-icon-box-size-xl: 64px;
+
+        --wui-icon-size-inherit: inherit;
+        --wui-icon-size-xxs: 10px;
+        --wui-icon-size-xs: 12px;
+        --wui-icon-size-sm: 14px;
+        --wui-icon-size-md: 16px;
+        --wui-icon-size-mdl: 18px;
+        --wui-icon-size-lg: 20px;
+        --wui-icon-size-xl: 24px;
+        --wui-icon-size-xxl: 28px;
+
+        --wui-wallet-image-size-inherit: inherit;
+        --wui-wallet-image-size-sm: 40px;
+        --wui-wallet-image-size-md: 56px;
+        --wui-wallet-image-size-lg: 80px;
+
+        --wui-visual-size-size-inherit: inherit;
+        --wui-visual-size-sm: 40px;
+        --wui-visual-size-md: 55px;
+        --wui-visual-size-lg: 80px;
+
+        --wui-box-size-md: 100px;
+        --wui-box-size-lg: 120px;
+
+        --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+        --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+        --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+        --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+        --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+        --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+        --wui-duration-lg: 200ms;
+        --wui-duration-md: 125ms;
+        --wui-duration-sm: 75ms;
+
+        --wui-path-network-sm: path(
+          'M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+        );
+
+        --wui-path-network-md: path(
+          'M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+        );
+
+        --wui-path-network-lg: path(
+          'M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+        );
+
+        --wui-width-network-sm: 36px;
+        --wui-width-network-md: 48px;
+        --wui-width-network-lg: 86px;
+
+        --wui-height-network-sm: 40px;
+        --wui-height-network-md: 54px;
+        --wui-height-network-lg: 96px;
+
+        --wui-icon-size-network-xs: 12px;
+        --wui-icon-size-network-sm: 16px;
+        --wui-icon-size-network-md: 24px;
+        --wui-icon-size-network-lg: 42px;
+
+        --wui-color-inherit: inherit;
+
+        --wui-color-inverse-100: #fff;
+        --wui-color-inverse-000: #000;
+
+        --wui-cover: rgba(20, 20, 20, 0.8);
+
+        --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+        --wui-color-accent-100: var(--wui-color-accent-base-100);
+        --wui-color-accent-090: var(--wui-color-accent-base-090);
+        --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+        --wui-color-success-100: var(--wui-color-success-base-100);
+        --wui-color-success-125: var(--wui-color-success-base-125);
+
+        --wui-color-warning-100: var(--wui-color-warning-base-100);
+
+        --wui-color-error-100: var(--wui-color-error-base-100);
+        --wui-color-error-125: var(--wui-color-error-base-125);
+
+        --wui-color-blue-100: var(--wui-color-blue-base-100);
+        --wui-color-blue-90: var(--wui-color-blue-base-90);
+
+        --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+        --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+        --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+        --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+        --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+
+        --wui-avatar-border: var(--wui-avatar-border-base);
+
+        --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+        --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+      }
+
+      @supports (background: color-mix(in srgb, white 50%, black)) {
+        :root {
+          --wui-color-modal-bg: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-modal-bg-base)
+          );
+
+          --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+
+          --wui-color-accent-100: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 100%,
+            transparent
+          );
+          --wui-color-accent-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-090: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent
+          );
+          --wui-color-accent-glass-080: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent
+          );
+          --wui-color-accent-glass-020: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 20%,
+            transparent
+          );
+          --wui-color-accent-glass-015: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 15%,
+            transparent
+          );
+          --wui-color-accent-glass-010: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 10%,
+            transparent
+          );
+          --wui-color-accent-glass-005: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 5%,
+            transparent
+          );
+          --wui-color-accent-002: color-mix(
+            in srgb,
+            var(--wui-color-accent-base-100) 2%,
+            transparent
+          );
+
+          --wui-color-fg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-100)
+          );
+          --wui-color-fg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-125)
+          );
+          --wui-color-fg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-150)
+          );
+          --wui-color-fg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-175)
+          );
+          --wui-color-fg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-200)
+          );
+          --wui-color-fg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-225)
+          );
+          --wui-color-fg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-250)
+          );
+          --wui-color-fg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-275)
+          );
+          --wui-color-fg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-300)
+          );
+          --wui-color-fg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-325)
+          );
+          --wui-color-fg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-350)
+          );
+
+          --wui-color-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-100)
+          );
+          --wui-color-bg-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-125)
+          );
+          --wui-color-bg-150: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-150)
+          );
+          --wui-color-bg-175: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-175)
+          );
+          --wui-color-bg-200: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-200)
+          );
+          --wui-color-bg-225: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-225)
+          );
+          --wui-color-bg-250: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-250)
+          );
+          --wui-color-bg-275: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-275)
+          );
+          --wui-color-bg-300: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-300)
+          );
+          --wui-color-bg-325: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-325)
+          );
+          --wui-color-bg-350: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-350)
+          );
+
+          --wui-color-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-100)
+          );
+          --wui-color-success-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-125)
+          );
+
+          --wui-color-warning-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-warning-base-100)
+          );
+
+          --wui-color-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-100)
+          );
+          --wui-color-blue-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-100)
+          );
+          --wui-color-blue-90: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-blue-base-90)
+          );
+          --wui-color-error-125: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-125)
+          );
+
+          --wui-icon-box-bg-error-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-error-base-100)
+          );
+          --wui-icon-box-bg-accent-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-blue-base-100)
+          );
+          --wui-icon-box-bg-success-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-success-base-100)
+          );
+          --wui-icon-box-bg-inverse-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-inverse-base-100)
+          );
+
+          --wui-all-wallets-bg-100: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-all-wallets-bg-100)
+          );
+
+          --wui-avatar-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-avatar-border-base)
+          );
+
+          --wui-thumbnail-border: color-mix(
+            in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-thumbnail-border-base)
+          );
+        }
+      }
+    </style><style media="enabled">
+      :root {
+        --w3m-color-mix: #000;
+        --w3m-accent: hsla(231, 100%, 70%, 1);
+        --w3m-default: #000;
+
+        --wui-color-modal-bg-base: #fff;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+        --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+        --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+
+        --wui-color-fg-100: #141414;
+        --wui-color-fg-125: #2d3131;
+        --wui-color-fg-150: #474d4d;
+        --wui-color-fg-175: #636d6d;
+        --wui-color-fg-200: #798686;
+        --wui-color-fg-225: #828f8f;
+        --wui-color-fg-250: #8b9797;
+        --wui-color-fg-275: #95a0a0;
+        --wui-color-fg-300: #9ea9a9;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #d0d0d0;
+
+        --wui-color-bg-100: #ffffff;
+        --wui-color-bg-125: #f5fafa;
+        --wui-color-bg-150: #f3f8f8;
+        --wui-color-bg-175: #eef4f4;
+        --wui-color-bg-200: #eaf1f1;
+        --wui-color-bg-225: #e5eded;
+        --wui-color-bg-250: #e1e9e9;
+        --wui-color-bg-275: #dce7e7;
+        --wui-color-bg-300: #d8e3e3;
+        --wui-color-bg-325: #f3f3f3;
+        --wui-color-bg-350: #202020;
+
+        --wui-color-success-base-100: #26b562;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f05142;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+        --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+        --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+        --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+        --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+        --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+        --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+        --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+        --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+        --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-icon-box-bg-error-base-100: #f4dfdd;
+        --wui-icon-box-bg-blue-base-100: #d9ecfb;
+        --wui-icon-box-bg-success-base-100: #daf0e4;
+        --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+        --wui-all-wallets-bg-100: #e8f1fa;
+
+        --wui-avatar-border-base: #f3f4f4;
+
+        --wui-thumbnail-border-base: #eaefef;
+
+        --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+        --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+        --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+        --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+        --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+        --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+        --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+        --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+        --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+        --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+        --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+
+        --wui-color-dark-glass-100: rgba(233, 233, 233, 1);
+      }
+    </style><style>
+      :root {
+        --w3m-color-mix: #fff;
+        --w3m-accent: hsla(230, 100%, 67%, 1);
+        --w3m-default: #fff;
+
+        --wui-color-modal-bg-base: #121313;
+        --wui-color-accent-base-100: var(--w3m-accent);
+
+        --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+        --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+        --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+        --wui-color-blueberry-050: hsla(231, 100%, 70%, 0.1);
+
+        --wui-color-fg-100: #e4e7e7;
+        --wui-color-fg-125: #d0d5d5;
+        --wui-color-fg-150: #a8b1b1;
+        --wui-color-fg-175: #a8b0b0;
+        --wui-color-fg-200: #949e9e;
+        --wui-color-fg-225: #868f8f;
+        --wui-color-fg-250: #788080;
+        --wui-color-fg-275: #788181;
+        --wui-color-fg-300: #6e7777;
+        --wui-color-fg-325: #9a9a9a;
+        --wui-color-fg-350: #363636;
+
+        --wui-color-bg-100: #141414;
+        --wui-color-bg-125: #191a1a;
+        --wui-color-bg-150: #1e1f1f;
+        --wui-color-bg-175: #222525;
+        --wui-color-bg-200: #272a2a;
+        --wui-color-bg-225: #2c3030;
+        --wui-color-bg-250: #313535;
+        --wui-color-bg-275: #363b3b;
+        --wui-color-bg-300: #3b4040;
+        --wui-color-bg-325: #252525;
+        --wui-color-bg-350: #ffffff;
+
+        --wui-color-success-base-100: #26d962;
+        --wui-color-success-base-125: #30a46b;
+
+        --wui-color-warning-base-100: #f3a13f;
+
+        --wui-color-error-base-100: #f25a67;
+        --wui-color-error-base-125: #df4a34;
+
+        --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+        --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+        --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+        --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+        --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+        --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+        --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+        --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+        --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+        --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+        --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+        --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+
+        --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+        --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+        --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+        --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+        --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+        --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+        --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+        --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+        --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+        --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+        --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+        --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+
+        --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+        --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+        --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+        --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+        --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+        --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+        --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+        --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+        --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+        --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+        --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+        --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+
+        --wui-color-dark-glass-100: rgba(42, 42, 42, 1);
+
+        --wui-icon-box-bg-error-base-100: #3c2426;
+        --wui-icon-box-bg-blue-base-100: #20303f;
+        --wui-icon-box-bg-success-base-100: #1f3a28;
+        --wui-icon-box-bg-inverse-base-100: #243240;
+
+        --wui-all-wallets-bg-100: #222b35;
+
+        --wui-avatar-border-base: #252525;
+
+        --wui-thumbnail-border-base: #252525;
+      }
+    </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["next-route-announcer","w3m-modal"])</script></head><body class="bg-lt_main dark:bg-main"><div id="__next"><div class="relative min-h-screen lg:h-screen w-full  bg-lt_main dark:bg-main dark:text-white "><div class="h-full w-full"><main class="hidden min-h-screen   w-full  bg-lt_main text-black dark:bg-main dark:text-white lg:block  "><div class="relative flex    h-full w-full gap-14"><div class="fixed left-20 top-0 bottom-0 z-30 mt-12 mb-20 flex max-h-screen flex-col items-center justify-between rounded-2xl bg-lt_secondary p-4 py-5 dark:bg-secondary max-2xl:p-4 max-lg:p-2"><a href="https://staking.mesier.app/"><img alt="virgo" loading="lazy" width="53" height="53" decoding="async" data-nimg="1" src="logo_lt.6c2e3015.png" style="color: transparent;"></a><div class="flex flex-col justify-between gap-10"><div class="relative w-max mx-auto flex   items-center cursor-pointer"><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="39" height="15" viewBox="0 0 39 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5852 0V14.5455H9.28977L4.03409 6.90341H3.94886V14.5455H0V0H3.35227L8.52273 7.61364H8.63636V0H12.5852Z" fill="#BDBDBD"></path><path d="M14.4531 14.5455V0H24.6804V3.18182H18.402V5.68182H24.0554V8.86364H18.402V14.5455H14.4531Z" fill="#BDBDBD"></path><path d="M25.7351 3.18182V0H38.3771V3.18182H34.0021V14.5455H30.1101V3.18182H25.7351Z" fill="#BDBDBD"></path></svg></div></div><div class="z-10  "><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#101118"></path></svg></div></div><div class="relative w-max mx-auto flex   items-center "><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.563 13c-.685 0-1.369-.15-1.902-.448L1.146 8.334C.802 8.14 0 7.578 0 6.515s.802-1.625 1.147-1.82L8.727.441c1.045-.588 2.621-.588 3.666 0l7.585 4.254c.345.193 1.147.756 1.147 1.82s-.802 1.625-1.147 1.82l-7.515 4.217c-.532.299-1.216.448-1.9.448Z" fill="#000"></path><path d="m19.975 11.176-.766-.426-6.742 3.796c-.533.3-1.219.45-1.902.45-.682 0-1.367-.15-1.9-.45L1.92 10.75l-.773.428C.802 11.37 0 11.938 0 13c0 1.063.802 1.63 1.146 1.823L8.66 19.05c.53.3 1.215.45 1.902.45.686 0 1.367-.15 1.9-.45l7.51-4.225c.346-.193 1.152-.757 1.152-1.825s-.8-1.63-1.15-1.824Z" fill="#000"></path><path d="m19.975 17.675-.766-.425-6.742 3.793c-.533.298-1.219.448-1.902.448-.682 0-1.367-.15-1.9-.448l-4.777-2.688L1.92 17.25l-.773.427C.802 17.871 0 18.438 0 19.5s.802 1.63 1.146 1.822l7.515 4.224c.53.299 1.218.454 1.902.454.683 0 1.364-.155 1.898-.454l7.511-4.223c.347-.193 1.153-.757 1.153-1.823 0-1.066-.8-1.63-1.15-1.825Z" fill="#000"></path></svg></div></div><div class="z-10  " style="filter: drop-shadow(rgb(255, 188, 57) 0px 0px 40px);"><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#FFBC39"></path></svg></div></div><div class="relative w-max mx-auto flex   items-center cursor-pointer"><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 2a2 2 0 0 1 2 2v24H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h15ZM5.25 7.5a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Z" fill="#BDBDBD"></path><path d="M23 27.917V16h5v6a6.002 6.002 0 0 1-5 5.917Z" fill="#BDBDBD"></path></svg></div></div><div class="z-10  "><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#101118"></path></svg></div></div></div><div class=" "><button><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.8028 13.8435C22.2201 14.0652 22.542 14.4152 22.7686 14.7652C23.2097 15.4885 23.1739 16.3752 22.7447 17.1568L21.9101 18.5568C21.469 19.3035 20.6463 19.7702 19.7998 19.7702C19.3825 19.7702 18.9175 19.6535 18.536 19.4202C18.226 19.2218 17.8683 19.1518 17.4868 19.1518C16.3064 19.1518 15.3168 20.1202 15.281 21.2752C15.281 22.6168 14.1841 23.6668 12.813 23.6668H11.1915C9.80844 23.6668 8.71154 22.6168 8.71154 21.2752C8.6877 20.1202 7.6981 19.1518 6.51774 19.1518C6.12429 19.1518 5.7666 19.2218 5.46853 19.4202C5.087 19.6535 4.61009 19.7702 4.20471 19.7702C3.34627 19.7702 2.52359 19.3035 2.08245 18.5568L1.25977 17.1568C0.818626 16.3985 0.794781 15.4885 1.23593 14.7652C1.42669 14.4152 1.78438 14.0652 2.18975 13.8435C2.52359 13.6802 2.7382 13.4118 2.94089 13.0968C3.53703 12.0935 3.17935 10.7752 2.16591 10.1802C0.985546 9.51516 0.604015 8.0335 1.28362 6.8785L2.08245 5.50183C2.77397 4.34683 4.2524 3.9385 5.44469 4.61516C6.48197 5.17516 7.82925 4.80183 8.43732 3.81016C8.62808 3.4835 8.73539 3.1335 8.71154 2.7835C8.6877 2.3285 8.81885 1.89683 9.04538 1.54683C9.48653 0.823496 10.2854 0.356829 11.1557 0.333496H12.8368C13.7191 0.333496 14.518 0.823496 14.9591 1.54683C15.1737 1.89683 15.3168 2.3285 15.281 2.7835C15.2572 3.1335 15.3645 3.4835 15.5553 3.81016C16.1633 4.80183 17.5106 5.17516 18.5598 4.61516C19.7402 3.9385 21.2305 4.34683 21.9101 5.50183L22.709 6.8785C23.4005 8.0335 23.0189 9.51516 21.8267 10.1802C20.8132 10.7752 20.4555 12.0935 21.0636 13.0968C21.2544 13.4118 21.469 13.6802 21.8028 13.8435ZM8.62796 12.0118C8.62796 13.8435 10.1422 15.3018 12.014 15.3018C13.8859 15.3018 15.3644 13.8435 15.3644 12.0118C15.3644 10.1801 13.8859 8.71013 12.014 8.71013C10.1422 8.71013 8.62796 10.1801 8.62796 12.0118Z" fill="#fff"></path></svg></button></div></div><div class="ml-40 h-full w-full  "><div class="relative w-full"><div class=" fixed right-0 top-0 z-20    w-full bg-lt_main dark:bg-main"><div class="ml-auto mr-12   w-4/5 px-4  pt-12 pb-2 xl:mr-16 2xl:w-5/6"><nav class=" gap flex w-full  items-center justify-between gap-6 max-2xl:gap-4 "><div class="hidden w-max items-center gap-3 lg:flex open"><div class="w-max open">Stake</div></div><div class="hidden h-[1px] w-full bg-main dark:bg-lt_main lg:block"></div><div class="flex items-center gap-5"><div class="block cursor-pointer rounded-xl bg-gradient-to-tr from-success_dark to-info_light py-3 px-4 lg:block open"><img alt="profile" loading="lazy" width="20" height="26" decoding="async" data-nimg="1" src="profile.7debf423.svg" style="color: transparent;"></div><div class="hidden lg:block open">Connect</div><div class=" lg:hidden open">Stake</div></div><div class="min-w-fit group flex relative"><p></p><div class="hidden h-[1px] w-full bg-main dark:bg-lt_main lg:block"></div></div></nav></div></div></div><div class="h-full w-full px-10 pt-20 pb-20  lg:pt-28  xl:px-16"><div class="h-max xl:h-[85vh] w-full lg:pb-8 xl:pb-16 "><div class=" h-full mt-7 mb-8 xl:mb-0 max-2xl:mt-4 grid grid-cols-1 xl:grid-cols-3 gap-4 p-3 xl:p-0   xl:bg-transparent xl:dark:bg-transparent"><div class=" w-full h-full  rounded-xl lg:bg-lt_secondary lg:dark:bg-secondary lg:p-4 mb-10 lg:hidden"><div class="flex flex-col  h-full w-full"><div class="flex flex-col gap-2 mb-8 lg:mb-0"><div class=" rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#DEAB26] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold ">Total Value Locked</div><div class="text-base font-black max-2xl:text-xs">364,354,495,532</div></div><div class=" rounded-xl bg-gradient-to-r from-[#EA2020] to-[#8717BB] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Voter Token Threshold</div><div class="text-base font-black max-2xl:text-xs">87,000,000 M87</div></div><div class=" rounded-xl bg-gradient-to-r from-[#3ECA32] to-[#27E5FF] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Pōwehi Threshold</div><div class="text-base font-black max-2xl:text-xs">1,000,000,000 M87</div></div></div><div class="lg:hidden flex mb-8 md:mb-4 mt-4   align-center"><div class="text-base mr-3 max-2xl:text-xs w-full h-full items-center flex"><span class="text-base font-semibold"> Staking Info</span><a href="https://staking.mesier.app"><img alt="warning" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="ml-2" src="warning.dc0ff9ae.svg" style="color: transparent;"></a></div><a title="Buy M87" color="secondary" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  bg-lt_secondary dark:bg-secondary  w-full md:w-auto" href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888">Buy M87</a></div><div class="hidden lg:block mt-12"><div class="mb-2 mt-4 text-sm max-2xl:mb-1 max-2xl:mt-2 max-2xl:text-xs mx-4">Staking Info:</div><div class="flex flex-col gap-5 text-sm max-2xl:text-xs mx-4"><div>1- Any holder of an M87 stake who ranks within the top 87 positions is considered a Pōwehi.</div><div>2- The holder of an M87 stake who is not ranked among the top 87 staked positions is considered a Halo.</div><div>3- A wallet that has staked all 87 proposals that have passed will be temporarily Dark Listed (Messier Objects will always remain Dark Listed as their tokens are always staked), and all Dark Listed stakes will receive exclusive Supernova rewards.</div><div>4- Those who wish to participate in the additional yield at the end of a cycle without having staked at the beginning may lock in their stake for a full cycle's worth of proposals in exchange for a "Darklisting Qualification".</div></div></div><a href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888" title="Buy M87" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  from-purple to-blue    hidden lg:block mt-auto" target="_blank" rel="noopener noreferrer">Buy M87</a></div></div><div class="col-span-2 flex h-full w-full flex-col lg:pt-16"><div class=" grid h-3/4 grid-cols-1 gap-3 lg:grid-cols-2"><div class="flex   h-full flex-col  gap-3"><div><div class="mb-3 text-base">Dark Listed</div><div class=" bg-dark flex flex-col items-center justify-end gap-4 rounded-xl bg-lt_secondary py-5 px-4 dark:bg-secondary"><div class="relative w-[70px] "><div class="inherit -mt-[50px] ml-0 mr-0 "><div class="relative flex items-center justify-center"><img alt="stake star" loading="lazy" width="145" height="161" decoding="async" data-nimg="1" class="absolute z-0 w-28 lg:w-32" src="stake-star.a2d11645.svg" style="color: transparent;"><img alt="eth icon" loading="lazy" width="44" height="55" decoding="async" data-nimg="1" class=" z-10" src="eth-icon.f9bae877.svg" style="color: transparent;"></div></div></div><div class=" mt-12 text-center text-lg">You are not Dark listed yet!</div></div></div><div class="mb-4 block w-full lg:hidden"><div class="max-2xl:px5 bg-dark items-center justify-between rounded-xl bg-lt_secondary py-5 px-7 dark:bg-secondary max-2xl:py-4 "><div class=" grid w-full grid-cols-2"><div class="lg:w-full"> Total Staked M87:</div><div class="text-right lg:w-full">0 M87</div></div><div class=" mt-2 grid w-full grid-cols-2 border-t border-black pt-2"><div class="lg:w-full">Available to Withdraw :</div><div class="text-right lg:w-full">0 M87</div></div></div><div class="flex justify-center"></div></div><div class=" h-full lg:hidden"><div class="mb-2 flex items-center justify-between text-base"><p>Token Allocations</p><div class="justify-end lg:flex open"><button class="mx-5 flex items-center gap-2 rounded-xl bg-lt_secondary px-8 py-3 shadow-3xl dark:bg-secondary max-2xl:px-5 max-2xl:py-3 open"><div class="rounded-xl bg-green p-2.5 max-2xl:p-2"><img alt="withdraw-icon" loading="lazy" width="12" height="14" decoding="async" data-nimg="1" src="download.3d46162a.svg" style="color: transparent;"></div><div class=" text-sm">Withdraw</div></button></div></div><div class="h-max   bg-dark rounded-xl bg-lt_secondary px-6 pb-3 pt-2 dark:bg-secondary"><div class="flex gap-1 rounded-xl bg-lt_main dark:bg-main p-3 shadow-3xl mb-5 undefined"><button class="w-full bg-dark py-4 text-lt_main px-3 text-center rounded-xl bg-dark p-6 bg-blue_gray dark:bg-blue_gray">MTT Balance : 0</button><button class="py-4 px-3 w-full text-center">MOTT Balance : 0</button></div><div class="mt-2 flex flex-col gap-2 "></div></div></div><div class="mb-5 h-auto lg:mb-0"><div class="mb-3 text-base">Stake</div><div class="z-10 flex w-full max-2xl:gap-15 flex-col justify-between gap-11 rounded-2xl bg-lt_secondary p-4 pt-6 dark:bg-secondary"><div class="flex flex-col gap-2"><div>M87 Wallet Balance: 0 M87</div><input class="input w-full rounded-lg border border-info bg-lt_secondary py-3 px-4 shadow-3xl outline-0 dark:bg-secondary lg:block" value="0"><div class="mt-3 text-xs">By staking your tokens, you will receive MTT tokens that can be exchanged back for M87 at any time.</div></div><button title="Stake" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold from-pink to-purple open">Stake</button><div><div class="rodal rodal-fade-leave" tabindex="-1" style="display: none; animation-duration: 300ms;"><div class="rodal-mask"></div><div class="rodal-dialog rodal-zoom-leave" style="width: 400px; height: 240px; animation-duration: 300ms; background-color: transparent; box-shadow: none; margin: 0px auto;"><div class="relative w-[300px] md:w-[500px]  overflow-y-auto mx-auto flex py-2 flex-col items-center justify-center max-h-[500px] md:max-h-[700px] rounded-xl bg-secondary text-white "><div class="z-20 flex w-auto flex-col rounded-xl p-4 py-5"><div class="w-auto "><div class=" text-center text-sm mb-2">To benefit from our real-time facilities on your mobile device, please follow the instructions below and make sure to turn off smart transaction. (Note: These settings are only required for mobile use and are not necessary for desktop users.)<a href="https://support.metamask.io/transactions-and-gas/transactions/smart-transactions/#:~:text=MetaMask%20Smart%20Transactions%20is%20a,safe%20from%20fails%20and%20reverts." target="_blank" class="text-warning px-2" rel="noopener noreferrer">Read more</a></div><div class="flex justify-between items-center gap-2"><img src="urn:scrapbook:download:error:https://support.metamask.io/assets/images/MetaMask_find_advanced_settings-dd263c141b5beccbdf4ac8ffba24ed1f.gif" alt="gif" height="100" class="mx-auto w-1/2 "><img src="urn:scrapbook:download:error:https://support.metamask.io/assets/images/MetaMask_turn_on_smart_transactions-7d4c80a7ddb877aa68aec5d5209be579.gif" alt="gif" height="100" class="mx-auto w-1/2  "></div><button class="mt-11 w-full rounded-xl bg-gradient-to-l from-primary_dark to-success_light py-4 max-2xl:mt-6 max-2xl:py-3">Confirm</button></div></div></div></div></div></div></div></div></div><div class=" h-full hidden h-full lg:block"><div class="mb-2 flex items-center justify-between text-base"><p>Token Allocations</p><div class="justify-end lg:flex"><button class="mx-5 flex items-center gap-2 rounded-xl bg-lt_secondary px-8 py-3 shadow-3xl dark:bg-secondary max-2xl:px-5 max-2xl:py-3 open"><div class="rounded-xl bg-green p-2.5 max-2xl:p-2"><img alt="withdraw-icon" loading="lazy" width="12" height="14" decoding="async" data-nimg="1" src="download.3d46162a.svg" style="color: transparent;"></div><div class=" text-sm">Withdraw</div></button></div></div><div class="h-max   bg-dark rounded-xl bg-lt_secondary px-6 pb-3 pt-2 dark:bg-secondary"><div class="flex gap-1 rounded-xl bg-lt_main dark:bg-main p-3 shadow-3xl mb-5 undefined"><button class="w-full bg-dark py-4 text-lt_main px-3 text-center rounded-xl bg-dark p-6 bg-blue_gray dark:bg-blue_gray">MTT Balance : 0</button><button class="py-4 px-3 w-full text-center">MOTT Balance : 0</button></div><div class="mt-2 flex flex-col gap-2 "></div></div></div></div><div class="mt-auto hidden w-full lg:block"><div class=" my-3 text-base">Total Staked M87: <strong>0 M87</strong></div><div class="max-2xl:px5 bg-dark flex items-center justify-between rounded-xl bg-lt_secondary py-5 px-7 dark:bg-secondary max-2xl:py-4 "><div class="lg:w-full">Available to Withdraw : <strong>0 M87</strong></div><div class="justify-end lg:flex">0</div></div></div></div><div class=" w-full h-full  rounded-xl lg:bg-lt_secondary lg:dark:bg-secondary lg:p-4 mb-10 hidden lg:block"><div class="flex flex-col  h-full w-full"><div class="flex flex-col gap-2 mb-8 lg:mb-0"><div class=" rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#DEAB26] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold ">Total Value Locked</div><div class="text-base font-black max-2xl:text-xs">364,354,495,532</div></div><div class=" rounded-xl bg-gradient-to-r from-[#EA2020] to-[#8717BB] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Voter Token Threshold</div><div class="text-base font-black max-2xl:text-xs">87,000,000 M87</div></div><div class=" rounded-xl bg-gradient-to-r from-[#3ECA32] to-[#27E5FF] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Pōwehi Threshold</div><div class="text-base font-black max-2xl:text-xs">1,000,000,000 M87</div></div></div><div class="lg:hidden flex mb-8 md:mb-4 mt-4   align-center"><div class="text-base mr-3 max-2xl:text-xs w-full h-full items-center flex"><span class="text-base font-semibold"> Staking Info</span><a href="https://staking.mesier.app/"><img alt="warning" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="ml-2" src="warning.dc0ff9ae.svg" style="color: transparent;"></a></div><a title="Buy M87" color="secondary" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  bg-lt_secondary dark:bg-secondary  w-full md:w-auto" href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888">Buy M87</a></div><div class="hidden lg:block mt-12"><div class="mb-2 mt-4 text-sm max-2xl:mb-1 max-2xl:mt-2 max-2xl:text-xs mx-4">Staking Info:</div><div class="flex flex-col gap-5 text-sm max-2xl:text-xs mx-4"><div>1- Any holder of an M87 stake who ranks within the top 87 positions is considered a Pōwehi.</div><div>2- The holder of an M87 stake who is not ranked among the top 87 staked positions is considered a Halo.</div><div>3- A wallet that has staked all 87 proposals that have passed will be temporarily Dark Listed (Messier Objects will always remain Dark Listed as their tokens are always staked), and all Dark Listed stakes will receive exclusive Supernova rewards.</div><div>4- Those who wish to participate in the additional yield at the end of a cycle without having staked at the beginning may lock in their stake for a full cycle's worth of proposals in exchange for a "Darklisting Qualification".</div></div></div><a href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888" title="Buy M87" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  from-purple to-blue    hidden lg:block mt-auto" target="_blank" rel="noopener noreferrer">Buy M87</a></div></div></div></div></div></div></div></main><main class=" w-full    bg-lt_main text-black dark:bg-main dark:text-white lg:hidden   "><div class=" fixed top-0 z-20  w-full bg-lt_main dark:bg-main"><div class="px-4 py-4 sm:px-6 sm:py-6 "><nav class=" gap flex w-full  items-center justify-between gap-6 max-2xl:gap-4 "><div class="hidden w-max items-center gap-3 lg:flex"><div class="w-max">Stake</div></div><div class="hidden h-[1px] w-full bg-main dark:bg-lt_main lg:block"></div><div class="flex items-center gap-5"><div class="block cursor-pointer rounded-xl bg-gradient-to-tr from-success_dark to-info_light py-3 px-4 lg:block open"><img alt="profile" loading="lazy" width="20" height="26" decoding="async" data-nimg="1" src="profile.7debf423.svg" style="color: transparent;"></div><div class="hidden lg:block">0xee....DDf4</div><div class=" lg:hidden">Stake</div></div><div class="min-w-fit group flex relative"><p></p><div class="hidden h-[1px] w-full bg-main dark:bg-lt_main lg:block"></div></div></nav></div></div><div class="h-full w-full  px-4 pt-24  pb-28 sm:px-6"><div class="h-max xl:h-[85vh] w-full lg:pb-8 xl:pb-16 "><div class=" h-full mt-7 mb-8 xl:mb-0 max-2xl:mt-4 grid grid-cols-1 xl:grid-cols-3 gap-4 p-3 xl:p-0   xl:bg-transparent xl:dark:bg-transparent"><div class=" w-full h-full  rounded-xl lg:bg-lt_secondary lg:dark:bg-secondary lg:p-4 mb-10 lg:hidden"><div class="flex flex-col  h-full w-full"><div class="flex flex-col gap-2 mb-8 lg:mb-0"><div class=" rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#DEAB26] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold ">Total Value Locked</div><div class="text-base font-black max-2xl:text-xs">364,354,495,532</div></div><div class=" rounded-xl bg-gradient-to-r from-[#EA2020] to-[#8717BB] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Voter Token Threshold</div><div class="text-base font-black max-2xl:text-xs">87,000,000 M87</div></div><div class=" rounded-xl bg-gradient-to-r from-[#3ECA32] to-[#27E5FF] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Pōwehi Threshold</div><div class="text-base font-black max-2xl:text-xs">1,000,000,000 M87</div></div></div><div class="lg:hidden flex mb-8 md:mb-4 mt-4   align-center"><div class="text-base mr-3 max-2xl:text-xs w-full h-full items-center flex"><span class="text-base font-semibold"> Staking Info</span><a href="https://virgo.messier.app/stake/howToStake"><img alt="warning" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="ml-2" src="warning.dc0ff9ae.svg" style="color: transparent;"></a></div><a title="Buy M87" color="secondary" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  bg-lt_secondary dark:bg-secondary  w-full md:w-auto" href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888">Buy M87</a></div><div class="hidden lg:block mt-12"><div class="mb-2 mt-4 text-sm max-2xl:mb-1 max-2xl:mt-2 max-2xl:text-xs mx-4">Staking Info:</div><div class="flex flex-col gap-5 text-sm max-2xl:text-xs mx-4"><div>1- Any holder of an M87 stake who ranks within the top 87 positions is considered a Pōwehi.</div><div>2- The holder of an M87 stake who is not ranked among the top 87 staked positions is considered a Halo.</div><div>3- A wallet that has staked all 87 proposals that have passed will be temporarily Dark Listed (Messier Objects will always remain Dark Listed as their tokens are always staked), and all Dark Listed stakes will receive exclusive Supernova rewards.</div><div>4- Those who wish to participate in the additional yield at the end of a cycle without having staked at the beginning may lock in their stake for a full cycle's worth of proposals in exchange for a "Darklisting Qualification".</div></div></div><a href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888" title="Buy M87" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  from-purple to-blue    hidden lg:block mt-auto" target="_blank" rel="noopener noreferrer">Buy M87</a></div></div><div class="col-span-2 flex h-full w-full flex-col lg:pt-16"><div class=" grid h-3/4 grid-cols-1 gap-3 lg:grid-cols-2"><div class="flex   h-full flex-col  gap-3"><div><div class="mb-3 text-base">Dark Listed</div><div class=" bg-dark flex flex-col items-center justify-end gap-4 rounded-xl bg-lt_secondary py-5 px-4 dark:bg-secondary"><div class="relative w-[70px] "><div class="inherit -mt-[50px] ml-0 mr-0 "><div class="relative flex items-center justify-center"><img alt="stake star" loading="lazy" width="145" height="161" decoding="async" data-nimg="1" class="absolute z-0 w-28 lg:w-32" src="stake-star.a2d11645.svg" style="color: transparent;"><img alt="eth icon" loading="lazy" width="44" height="55" decoding="async" data-nimg="1" class=" z-10" src="eth-icon.f9bae877.svg" style="color: transparent;"></div></div></div><div class=" mt-12 text-center text-lg">You are not Dark listed yet!</div></div></div><div class="mb-4 block w-full lg:hidden"><div class="max-2xl:px5 bg-dark items-center justify-between rounded-xl bg-lt_secondary py-5 px-7 dark:bg-secondary max-2xl:py-4 "><div class=" grid w-full grid-cols-2"><div class="lg:w-full"> Total Staked M87:</div><div class="text-right lg:w-full">0 M87</div></div><div class=" mt-2 grid w-full grid-cols-2 border-t border-black pt-2"><div class="lg:w-full">Available to Withdraw :</div><div class="text-right lg:w-full">0 M87</div></div></div><div class="flex justify-center"></div></div><div class=" h-full lg:hidden"><div class="mb-2 flex items-center justify-between text-base"><p>Token Allocations</p><div class="justify-end lg:flex"><button class="mx-5 flex items-center gap-2 rounded-xl bg-lt_secondary px-8 py-3 shadow-3xl dark:bg-secondary max-2xl:px-5 max-2xl:py-3 open"><div class="rounded-xl bg-green p-2.5 max-2xl:p-2"><img alt="withdraw-icon" loading="lazy" width="12" height="14" decoding="async" data-nimg="1" src="download.3d46162a.svg" style="color: transparent;"></div><div class=" text-sm">Withdraw</div></button></div></div><div class="h-max   bg-dark rounded-xl bg-lt_secondary px-6 pb-3 pt-2 dark:bg-secondary"><div class="flex gap-1 rounded-xl bg-lt_main dark:bg-main p-3 shadow-3xl mb-5 undefined"><button class="w-full bg-dark py-4 text-lt_main px-3 text-center rounded-xl bg-dark p-6 bg-blue_gray dark:bg-blue_gray">MTT Balance : 0</button><button class="py-4 px-3 w-full text-center">MOTT Balance : 0</button></div><div class="mt-2 flex flex-col gap-2 "></div></div></div><div class="mb-5 h-auto lg:mb-0"><div class="mb-3 text-base open">Stake</div><div class="z-10 flex w-full max-2xl:gap-15 flex-col justify-between gap-11 rounded-2xl bg-lt_secondary p-4 pt-6 dark:bg-secondary"><div class="flex flex-col gap-2"><div>M87 Wallet Balance: 0 M87</div><input class="input w-full rounded-lg border border-info bg-lt_secondary py-3 px-4 shadow-3xl outline-0 dark:bg-secondary lg:block" value="0"><div class="mt-3 text-xs">By staking your tokens, you will receive MTT tokens that can be exchanged back for M87 at any time.</div></div><button title="Stake" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  from-pink to-purple  undefined open">Stake</button><div><div class="rodal rodal-fade-leave" tabindex="-1" style="display: none; animation-duration: 300ms;"><div class="rodal-mask"></div><div class="rodal-dialog rodal-zoom-leave" style="width: 400px; height: 240px; animation-duration: 300ms; background-color: transparent; box-shadow: none; margin: 0px auto;"><div class="relative w-[300px] md:w-[500px]  overflow-y-auto mx-auto flex py-2 flex-col items-center justify-center max-h-[500px] md:max-h-[700px] rounded-xl bg-secondary text-white "><div class="z-20 flex w-auto flex-col rounded-xl p-4 py-5"><div class="w-auto "><div class=" text-center text-sm mb-2">To benefit from our real-time facilities on your mobile device, please follow the instructions below and make sure to turn off smart transaction. (Note: These settings are only required for mobile use and are not necessary for desktop users.)<a href="https://support.metamask.io/transactions-and-gas/transactions/smart-transactions/#:~:text=MetaMask%20Smart%20Transactions%20is%20a,safe%20from%20fails%20and%20reverts." target="_blank" class="text-warning px-2" rel="noopener noreferrer">Read more</a></div><div class="flex justify-between items-center gap-2"><img src="urn:scrapbook:download:error:https://support.metamask.io/assets/images/MetaMask_find_advanced_settings-dd263c141b5beccbdf4ac8ffba24ed1f.gif" alt="gif" height="100" class="mx-auto w-1/2 "><img src="urn:scrapbook:download:error:https://support.metamask.io/assets/images/MetaMask_turn_on_smart_transactions-7d4c80a7ddb877aa68aec5d5209be579.gif" alt="gif" height="100" class="mx-auto w-1/2  "></div><button class="mt-11 w-full rounded-xl bg-gradient-to-l from-primary_dark to-success_light py-4 max-2xl:mt-6 max-2xl:py-3">Confirm</button></div></div></div></div></div></div></div></div></div><div class=" h-full hidden h-full lg:block"><div class="mb-2 flex items-center justify-between text-base"><p>Token Allocations</p><div class="justify-end lg:flex"><button class="mx-5 flex items-center gap-2 rounded-xl bg-lt_secondary px-8 py-3 shadow-3xl dark:bg-secondary max-2xl:px-5 max-2xl:py-3 open"><div class="rounded-xl bg-green p-2.5 max-2xl:p-2"><img alt="withdraw-icon" loading="lazy" width="12" height="14" decoding="async" data-nimg="1" src="download.3d46162a.svg" style="color: transparent;"></div><div class=" text-sm">Withdraw</div></button></div></div><div class="h-max   bg-dark rounded-xl bg-lt_secondary px-6 pb-3 pt-2 dark:bg-secondary"><div class="flex gap-1 rounded-xl bg-lt_main dark:bg-main p-3 shadow-3xl mb-5 undefined"><button class="w-full bg-dark py-4 text-lt_main px-3 text-center rounded-xl bg-dark p-6 bg-blue_gray dark:bg-blue_gray">MTT Balance : 0</button><button class="py-4 px-3 w-full text-center">MOTT Balance : 0</button></div><div class="mt-2 flex flex-col gap-2 "></div></div></div></div><div class="mt-auto hidden w-full lg:block"><div class=" my-3 text-base">Total Staked M87: <strong>0 M87</strong></div><div class="max-2xl:px5 bg-dark flex items-center justify-between rounded-xl bg-lt_secondary py-5 px-7 dark:bg-secondary max-2xl:py-4 "><div class="lg:w-full">Available to Withdraw : <strong>0 M87</strong></div><div class="justify-end lg:flex">0</div></div></div></div><div class=" w-full h-full  rounded-xl lg:bg-lt_secondary lg:dark:bg-secondary lg:p-4 mb-10 hidden lg:block"><div class="flex flex-col  h-full w-full"><div class="flex flex-col gap-2 mb-8 lg:mb-0"><div class=" rounded-xl bg-gradient-to-r from-[#FF7A00] to-[#DEAB26] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold ">Total Value Locked</div><div class="text-base font-black max-2xl:text-xs">364,354,495,532</div></div><div class=" rounded-xl bg-gradient-to-r from-[#EA2020] to-[#8717BB] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Voter Token Threshold</div><div class="text-base font-black max-2xl:text-xs">87,000,000 M87</div></div><div class=" rounded-xl bg-gradient-to-r from-[#3ECA32] to-[#27E5FF] px-8 py-6 max-2xl:py-3 max-2xl:px-4"><div class="text-lg font-semibold">Pōwehi Threshold</div><div class="text-base font-black max-2xl:text-xs">1,000,000,000 M87</div></div></div><div class="lg:hidden flex mb-8 md:mb-4 mt-4   align-center"><div class="text-base mr-3 max-2xl:text-xs w-full h-full items-center flex"><span class="text-base font-semibold"> Staking Info</span><a href="https://virgo.messier.app/stake/howToStake"><img alt="warning" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="ml-2" src="warning.dc0ff9ae.svg" style="color: transparent;"></a></div><a title="Buy M87" color="secondary" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  bg-lt_secondary dark:bg-secondary  w-full md:w-auto" href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888">Buy M87</a></div><div class="hidden lg:block mt-12"><div class="mb-2 mt-4 text-sm max-2xl:mb-1 max-2xl:mt-2 max-2xl:text-xs mx-4">Staking Info:</div><div class="flex flex-col gap-5 text-sm max-2xl:text-xs mx-4"><div>1- Any holder of an M87 stake who ranks within the top 87 positions is considered a Pōwehi.</div><div>2- The holder of an M87 stake who is not ranked among the top 87 staked positions is considered a Halo.</div><div>3- A wallet that has staked all 87 proposals that have passed will be temporarily Dark Listed (Messier Objects will always remain Dark Listed as their tokens are always staked), and all Dark Listed stakes will receive exclusive Supernova rewards.</div><div>4- Those who wish to participate in the additional yield at the end of a cycle without having staked at the beginning may lock in their stake for a full cycle's worth of proposals in exchange for a "Darklisting Qualification".</div></div></div><a href="https://app.uniswap.org/swap?outputCurrency=0x80122c6a83c8202ea365233363d3f4837d13e888" title="Buy M87" class="w-full text-sm md:text-lg text-center block rounded-xl bg-gradient-to-r py-4 font-extrabold  from-purple to-blue    hidden lg:block mt-auto" target="_blank" rel="noopener noreferrer">Buy M87</a></div></div></div></div></div><div class="fixed bottom-0 z-30 flex  h-max w-full items-center justify-center bg-lt_main py-3 dark:bg-main"><div class=" mx-auto mb-4   w-5/6 items-center   justify-between rounded-2xl bg-lt_secondary p-6 dark:bg-secondary max-2xl:p-4 max-lg:p-2 sm:w-3/4"><div class="grid grid-cols-3 gap-4 "><div class="relative w-max mx-auto flex   items-center cursor-pointer"><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="39" height="15" viewBox="0 0 39 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5852 0V14.5455H9.28977L4.03409 6.90341H3.94886V14.5455H0V0H3.35227L8.52273 7.61364H8.63636V0H12.5852Z" fill="#BDBDBD"></path><path d="M14.4531 14.5455V0H24.6804V3.18182H18.402V5.68182H24.0554V8.86364H18.402V14.5455H14.4531Z" fill="#BDBDBD"></path><path d="M25.7351 3.18182V0H38.3771V3.18182H34.0021V14.5455H30.1101V3.18182H25.7351Z" fill="#BDBDBD"></path></svg></div></div><div class="z-10  "><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#101118"></path></svg></div></div><div class="relative w-max mx-auto flex   items-center "><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.563 13c-.685 0-1.369-.15-1.902-.448L1.146 8.334C.802 8.14 0 7.578 0 6.515s.802-1.625 1.147-1.82L8.727.441c1.045-.588 2.621-.588 3.666 0l7.585 4.254c.345.193 1.147.756 1.147 1.82s-.802 1.625-1.147 1.82l-7.515 4.217c-.532.299-1.216.448-1.9.448Z" fill="#000"></path><path d="m19.975 11.176-.766-.426-6.742 3.796c-.533.3-1.219.45-1.902.45-.682 0-1.367-.15-1.9-.45L1.92 10.75l-.773.428C.802 11.37 0 11.938 0 13c0 1.063.802 1.63 1.146 1.823L8.66 19.05c.53.3 1.215.45 1.902.45.686 0 1.367-.15 1.9-.45l7.51-4.225c.346-.193 1.152-.757 1.152-1.825s-.8-1.63-1.15-1.824Z" fill="#000"></path><path d="m19.975 17.675-.766-.425-6.742 3.793c-.533.298-1.219.448-1.902.448-.682 0-1.367-.15-1.9-.448l-4.777-2.688L1.92 17.25l-.773.427C.802 17.871 0 18.438 0 19.5s.802 1.63 1.146 1.822l7.515 4.224c.53.299 1.218.454 1.902.454.683 0 1.364-.155 1.898-.454l7.511-4.223c.347-.193 1.153-.757 1.153-1.823 0-1.066-.8-1.63-1.15-1.825Z" fill="#000"></path></svg></div></div><div class="z-10  " style="filter: drop-shadow(rgb(255, 188, 57) 0px 0px 40px);"><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#FFBC39"></path></svg></div></div><div class="relative w-max mx-auto flex   items-center cursor-pointer"><div class="absolute left-0 right-0 z-20 mx-auto justify-center items-center w-full"><div class="w-fit mx-auto"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 2a2 2 0 0 1 2 2v24H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h15ZM5.25 7.5a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1H17a1 1 0 1 1 0 2H6.25a1 1 0 0 1-1-1Z" fill="#BDBDBD"></path><path d="M23 27.917V16h5v6a6.002 6.002 0 0 1-5 5.917Z" fill="#BDBDBD"></path></svg></div></div><div class="z-10  "><svg width="68" height="72" viewBox="0 0 68 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0966 1.91285C31.3789 -0.514334 36.6212 -0.514332 40.9034 1.91285L50.53 7.3692L60.0686 12.9779C64.3118 15.4729 66.9329 20.0128 66.972 24.9349L67.06 36L66.972 47.0651C66.9329 51.9872 64.3118 56.5271 60.0686 59.0221L50.53 64.6308L40.9034 70.0872C36.6211 72.5143 31.3788 72.5143 27.0966 70.0872L17.47 64.6308L7.93136 59.0221C3.68823 56.5271 1.06708 51.9872 1.02796 47.0651L0.939999 36L1.02796 24.9349C1.06708 20.0128 3.68824 15.4729 7.93136 12.9779L17.47 7.3692L27.0966 1.91285Z" fill="#101118"></path></svg></div></div></div></div></div></main></div></div><div class="Toastify"></div></div><next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">Virgo</p></next-route-announcer><w3m-modal class="" data-scrapbook-adoptedstylesheets="0" data-scrapbook-shadowdom="<!---->"></w3m-modal><script data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/; k18 = '/scrapbook-slot-index'; d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { e.assign.apply(e, d); } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(','); for (i = 0, I = l.length; i < I; i++) { d.adoptedStyleSheets.push(asl[l[i]]); } e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void(0), }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({elem: e, value: d}); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script></body></html>
